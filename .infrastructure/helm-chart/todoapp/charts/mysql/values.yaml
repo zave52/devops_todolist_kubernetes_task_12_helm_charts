@@ -9,6 +9,9 @@ image:
 stateful_set:
   replicas: 2
 
+serviceAccount:
+  name: mysql-service-account
+
 resources:
   requests:
     cpu: 500m
