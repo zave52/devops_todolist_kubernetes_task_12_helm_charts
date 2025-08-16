@@ -19,3 +19,5 @@ kubectl apply -f .infrastructure/metricsServer.yml
 helm dependency update helm-chart/todoapp
 
 helm install todoapp-release helm-chart/todoapp
+
+kubectl get all,cm,secret,ing -A > output.log
