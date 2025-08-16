@@ -16,4 +16,6 @@ kubectl wait --namespace ingress-nginx \
 
 kubectl apply -f .infrastructure/metricsServer.yml
 
+helm dependency update helm-chart/todoapp
+
 helm install todoapp-release helm-chart/todoapp
