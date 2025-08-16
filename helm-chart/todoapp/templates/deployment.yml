@@ -17,7 +17,7 @@ spec:
       labels:
         app: {{ .Chart.Name }}
     spec:
-      serviceAccountName: {{ .Chart.Name }}-secrets-reader
+      serviceAccountName: {{ .Values.todoapp.rbac.service_account.name }}
       containers:
         - name: {{ .Values.todoapp.image.name }}
           image: {{ .Values.todoapp.image.repository }}:{{ .Values.todoapp.image.version }}
