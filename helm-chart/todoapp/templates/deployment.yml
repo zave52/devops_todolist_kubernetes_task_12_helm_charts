@@ -47,7 +47,7 @@ spec:
             - name: {{ $k }}
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Chart.Name }}-secret
+                  name: {{ $.Chart.Name }}-secret
                   key: {{ $k }}
           {{- end }}
           ports:
